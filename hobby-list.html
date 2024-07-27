@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Explore Your Next Hobby</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hobby-list.html">Hobby List</a></li>
+                <li><a href="track-progress.html">Track Progress</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Search Bar Section -->
+        <section class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for hobbies..." onkeyup="filterHobbies()">
+        </section>
+
+        <!-- Hobby List Section -->
+        <section class="hobby-section">
+            <h2>Popular Hobbies</h2>
+            <ul class="hobby-list">
+                <li data-category="arts" data-tooltip="Explore your creativity through drawing, painting, and sketching.">
+                    <img src="images/drawing.jpg" alt="Drawing">
+                    <h3>Drawing</h3>
+                    <p>Unleash your creativity with pencils, pens, or digital tools.</p>
+                </li>
+                <li data-category="arts" data-tooltip="Create beautiful works of art using paints, brushes, and canvas.">
+                    <img src="images/painting.jpg" alt="Painting">
+                    <h3>Painting</h3>
+                    <p>Experiment with colors and techniques to create stunning art pieces.</p>
+                </li>
+                <li data-category="outdoor" data-tooltip="Immerse yourself in nature by exploring trails and scenic landscapes.">
+                    <img src="images/hiking.jpg" alt="Hiking">
+                    <h3>Hiking</h3>
+                    <p>Explore the great outdoors and enjoy the beauty of nature.</p>
+                </li>
+                <li data-category="music" data-tooltip="Learn to play melodies and harmonies on a keyboard instrument.">
+                    <img src="images/piano.jpg" alt="Piano">
+                    <h3>Piano</h3>
+                    <p>Learn to play beautiful melodies on the piano.</p>
+                </li>
+                <li data-category="tech" data-tooltip="Delve into coding and software development for creating web and mobile applications.">
+                    <img src="images/programming.jpg" alt="Programming">
+                    <h3>Programming</h3>
+                    <p>Build your own apps, websites, and games with coding skills.</p>
+                </li>
+                <li data-category="outdoor" data-tooltip="Experience the thrill of catching waves on a surfboard.">
+                    <img src="images/surfing.jpg" alt="Surfing">
+                    <h3>Surfing</h3>
+                    <p>Ride the waves and feel the adrenaline rush.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Hobby Categories -->
+        <section class="hobby-categories">
+            <h2>Browse by Categories</h2>
+            <div class="categories">
+                <div class="category" onclick="filterCategory('arts')">
+                    <img src="images/arts.jpg" alt="Arts">
+                    <h4>Arts & Crafts</h4>
+                </div>
+                <div class="category" onclick="filterCategory('outdoor')">
+                    <img src="images/outdoor.jpg" alt="Outdoor">
+                    <h4>Outdoor Activities</h4>
+                </div>
+                <div class="category" onclick="filterCategory('music')">
+                    <img src="images/music.jpg" alt="Music">
+                    <h4>Music</h4>
+                </div>
+                <div class="category" onclick="filterCategory('tech')">
+                    <img src="images/tech.jpg" alt="Tech">
+                    <h4>Tech & Programming</h4>
+                </div>
+                <div class="category" onclick="filterCategory('sports')">
+                    <img src="images/sports.jpg" alt="Sports">
+                    <h4>Sports</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hobby Tracker</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
