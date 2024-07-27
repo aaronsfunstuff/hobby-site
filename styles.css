@@ -732,3 +732,60 @@ canvas {
     vertical-align: middle;
     margin-right: 5px;
 }
+.calendar-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .calendar-header button {
+            background-color: #004d00;
+            color: #ffd700;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .calendar-header button:hover {
+            background-color: #003300;
+        }
+        .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.5rem;
+            text-align: center;
+        }
+        .day {
+            padding: 0.75rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            position: relative;
+        }
+        .day h4 {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        .event {
+            background-color: #004d00;
+            color: #ffd700;
+            border-radius: 3px;
+            padding: 0.3rem;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .event:hover {
+            background-color: #003300;
+        }
