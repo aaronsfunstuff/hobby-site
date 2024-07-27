@@ -251,3 +251,81 @@ ul li {
         max-width: 100%;
     }
 }
+/* Hero section */
+.hero {
+    background-color: #004d00; /* Dark green */
+    color: #ffd700; /* Gold */
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* About page section styles */
+.about-section {
+    margin-bottom: 3rem;
+}
+
+.about-section h2 {
+    color: #004d00; /* Dark green */
+    border-bottom: 2px solid #ffd700; /* Gold */
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.about-section p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.about-section ul {
+    list-style: disc;
+    padding-left: 2rem;
+}
+
+.about-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Team member styling */
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-right: 1.5rem;
+    object-fit: cover;
+}
+
+.team-info h3 {
+    color: #004d00; /* Dark green */
+}
+
+.team-info p {
+    color: #333;
+}
+
+.team-info p strong {
+    display: block;
+    color: #004d00; /* Dark green */
+    margin-bottom: 0.5rem;
+}
