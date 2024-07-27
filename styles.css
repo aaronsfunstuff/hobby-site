@@ -789,3 +789,36 @@ canvas {
         .event:hover {
             background-color: #003300;
         }
+.articles-container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .article {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .article h2 {
+            margin: 0;
+            color: #004d00;
+        }
+        .article .meta-info {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+        .article p {
+            color: #555;
+        }
+        .article .read-more {
+            color: #004d00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .article .read-more:hover {
+            text-decoration: underline;
+        }
