@@ -160,3 +160,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('progressForm').addEventListener('submit', updateProgress);
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const categories = document.querySelectorAll(".category");
+    const searchInput = document.getElementById("resourceSearch");
+
+    categories.forEach(category => {
+        const header = category.querySelector("h3");
+        header.addEventListener("click", () => {
+            category.classList.toggle("open");
+        });
+    });
+
+    searchInput.addEventListener("input", () => {
+        const filter = searchInput.value.toLowerCase();
+        const resourceCards = document.querySelectorAll(".resource-card");
+
+        resourceCards.forEach(card => {
+            const title = card.querySelector("h4").innerText.toLowerCase();
+            const description = card.querySelector("p").innerText.toLowerCase();
+
+            if (title.includes(filter) || description.includes(filter)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
