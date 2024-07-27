@@ -11,12 +11,11 @@ body {
     color: #333;
 }
 
-/* Ensure main content takes up available space */
 main {
     flex: 1;
 }
 
-/* Header styling */
+/* Header  */
 header {
     background-color: #004d00; /* Dark green */
     color: #ffd700; /* Gold */
@@ -44,7 +43,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Main content styling */
+/* Main content  */
 main {
     padding: 2rem;
 }
@@ -65,7 +64,7 @@ a:hover {
     color: #ffd700; /* Gold */
 }
 
-/* Footer styling */
+/* Footer */
 footer {
     background-color: #004d00; /* Dark green */
     color: #ffd700; /* Gold */
@@ -76,7 +75,7 @@ footer {
     width: 100%;
 }
 
-/* Form styling */
+/* Form  */
 form {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -112,7 +111,7 @@ form button:hover {
     background-color: #003300; /* Even darker green */
 }
 
-/* Testimonials styling */
+/* Testimonials */
 .testimonials blockquote {
     border-left: 4px solid #004d00; /* Dark green */
     padding-left: 1rem;
@@ -134,7 +133,7 @@ ul li {
     margin-bottom: 0.5rem;
 }
 
-/* Contact page styles */
+/* Contact page  */
 .contact-container {
     display: flex;
     flex-wrap: wrap;
@@ -251,7 +250,7 @@ ul li {
         max-width: 100%;
     }
 }
-/* Hero section */
+/* Hero */
 .hero {
     background-color: #004d00; /* Dark green */
     color: #ffd700; /* Gold */
@@ -269,7 +268,7 @@ ul li {
     font-size: 1.2rem;
 }
 
-/* About page section styles */
+/* About page  */
 .about-section {
     margin-bottom: 3rem;
 }
@@ -296,7 +295,7 @@ ul li {
     margin-bottom: 0.5rem;
 }
 
-/* Team member styling */
+/* Team member */
 .team-member {
     display: flex;
     align-items: center;
@@ -328,4 +327,133 @@ ul li {
     display: block;
     color: #004d00; /* Dark green */
     margin-bottom: 0.5rem;
+}
+/* Hobby List */
+.hobby-section {
+    text-align: center;
+}
+
+.hobby-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #004d00; /* Dark green */
+}
+
+.hobby-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hobby-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.hobby-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-list li img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.hobby-list li h3 {
+    font-size: 1.5rem;
+    color: #004d00; /* Dark green */
+    margin: 0.5rem 0;
+}
+
+.hobby-list li p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.hobby-list li::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, bottom 0.3s;
+    width: 200px;
+    text-align: center;
+}
+
+.hobby-list li:hover::after {
+    opacity: 1;
+    bottom: -60px;
+}
+
+/* Hobby Categories */
+.hobby-categories {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.hobby-categories h2 {
+    font-size: 2rem;
+    color: #004d00; /* Dark green */
+    margin-bottom: 1rem;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.category {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 160px;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.category h4 {
+    font-size: 1.2rem;
+    color: #004d00; /* Dark green */
 }
