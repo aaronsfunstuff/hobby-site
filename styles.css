@@ -457,3 +457,133 @@ ul li {
     font-size: 1.2rem;
     color: #004d00; /* Dark green */
 }
+.progress-overview {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.progress-overview p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Progress Chart */
+.progress-chart {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.progress-chart h2 {
+    margin-bottom: 1rem;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+/* Milestones */
+.milestones {
+    margin-top: 3rem;
+}
+
+.milestones h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.milestone-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.milestone-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 250px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.milestone-list li h3 {
+    font-size: 1.2rem;
+    color: #004d00; /* Dark green */
+    margin-bottom: 0.5rem;
+}
+
+.milestone-list li p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.milestone-list li progress {
+    width: 100%;
+    height: 10px;
+    appearance: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.milestone-list li progress::-webkit-progress-bar {
+    background-color: #eee;
+}
+
+.milestone-list li progress::-webkit-progress-value {
+    background-color: #004d00; /* Dark green */
+}
+
+/*  Progress Bar */
+.update-progress {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.update-progress h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.update-progress label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.update-progress select,
+.update-progress input,
+.update-progress textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.update-progress button {
+    background-color: #004d00; /* Dark green */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.update-progress button:hover {
+    background-color: #003300; /* Even darker green */
+}
