@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
             listItem.textContent = `${selectedHobby}: ${progressDetails}`;
             progressList.appendChild(listItem);
             
-            // Clear the form
             progressForm.reset();
         }
     });
@@ -55,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('newsletterEmail').value;
         
         if (email) {
-            // Here you would typically send the email to your server or a service
             alert(`Thank you for subscribing with ${email}!`);
             
             
@@ -89,3 +87,76 @@ function filterCategory(category) {
         }
     });
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const progressData = {
+        drawing: 40,
+        painting: 20,
+        hiking: 60,
+        piano: 50,
+        programming: 30,
+        surfing: 10
+    };
+
+    const ctx = document.getElementById('progressChart').getContext('2d');
+    const progressChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Drawing', 'Painting', 'Hiking', 'Piano', 'Programming', 'Surfing'],
+            datasets: [{
+                label: 'Progress (%)',
+                data: Object.values(progressData),
+                backgroundColor: [
+                    '#004d00', 
+                    '#ffd700', 
+                    '#4caf50', 
+                    '#8bc34a', 
+                    '#cddc39', 
+                    '#9e9e9e'  
+                ],
+                borderColor: [
+                    '#003300', 
+                    '#bfa600', 
+                    '#388e3c',
+                    '#689f38', 
+                    '#afb42b',
+                    '#757575'  
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#004d00' 
+                    }
+                }
+            }
+        }
+    });
+
+    const updateProgress = (event) => {
+        event.preventDefault();
+        const hobbySelect = document.getElementById('hobbySelect').value;
+        const progressInput = document.getElementById('progressInput').value;
+        const note = document.getElementById('note').value;
+
+        if (hobbySelect && progressInput) {
+            progressData[hobbySelect] = parseInt(progressInput);
+            progressChart.data.datasets[0].data = Object.values(progressData);
+            progressChart.update();
+
+            alert(`Progress for ${hobbySelect} updated to ${progressInput}%.\nNote: ${note}`);
+
+            document.getElementById('progressForm').reset();
+        }
+    };
+
+    document.getElementById('progressForm').addEventListener('submit', updateProgress);
+});
